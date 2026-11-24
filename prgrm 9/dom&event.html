@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM and Event Handling</title>
+    <script>
+        function changeBackground(){
+            document.body.style.backgroundColor="lightblue";
+        }
+        function changetext(){
+            document.getElementById("message").innerHTML="Mouse is over the text!";
+        }
+        function restoreText(){
+            document.getElementById("message").innerHTML="Move the mouse over this text";
+        }
+        function changeImage(){
+            document.getElementById("collegeImage").src="c:/Angela MCA images/images.jpg";
+        }
+        function restoreImage(){
+            document.getElementById("collegeImage").src="c:/Angela MCA images/KMEA-Engineering-College-Img-3.jpg";
+        }
+    </script>
+</head>
+<body>
+    <h1>DOM and Event Handling</h1>
+    <button onclick="changeBackground()">Change Background</button>
+    <br><br>
+    <h2 id="message"
+    onmouseover="changetext()" 
+    onmouseout="restoreText()">
+    Move the mouse over this text</h2>
+    <img id="collegeImage" 
+    src="c:/Angela MCA images/KMEA-Engineering-College-Img-3.jpg" 
+    width="300" 
+    onmouseover="changeImage()" 
+    onmouseout="restoreImage()">
+</body>
+</html>
